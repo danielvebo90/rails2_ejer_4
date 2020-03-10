@@ -1,6 +1,6 @@
 class Api::V1::PinsController < ApplicationController
   protect_from_forgery with: :null_session
-  before_action :authenticate, only: [:index, :create
+  before_action :authenticate, only: [:index, :create]
 
   def index
     render json: Pin.all.order('created_at DESC')
